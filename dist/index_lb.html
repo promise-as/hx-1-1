@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="applicable-device" content="pc">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>类别首页</title>
+    <script type="text/javascript" src="https://img.thea.cn/public/js/jquery-1.12.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://img.thea.cn/public/css/base.css">
+    <link rel="stylesheet" type="text/css" href="https://img.thea.cn/public/platform/thea/201905/hx/css/index.css" />
+</head>
+
+<body>
+    <!-- 页眉 -->
+    <div class="hxw-top-bar-wrap defaults_dataid" data-id="2-0-0-2-2-2-1-测试">
+        <div class="hxw-top-bar-inner clearfix">
+            <div class="hxw-nav clearfix">
+                <ul class="hxw-nav-list">
+                    <li class="hxw-nav-list-first"><a href="http://www.hxnews.com/">海峡网</a></li>
+                    <li><a href="http://www.hxnews.com/news/" target="_blank" title="新闻">新闻</a></li>
+                    <li><a href="http://www.hxnews.com/news/fj/" target="_blank" title="福建">福建</a></li>
+                    <li><a href="http://www.hxnews.com/news/fj/fz/" target="_blank" title="福州">福州</a></li>
+                    <li><a href="http://www.hxnews.com/news/fj/mn/" target="_blank" title="闽南">闽南</a></li>
+                    <li><a href="http://www.hxnews.com/news/la/" target="_blank" title="台湾">台湾</a></li>
+                    <li><a href="http://www.hxnews.com/news/gn/" target="_blank" title="国内">国内</a></li>
+                    <li><a href="http://www.hxnews.com/news/gj/" target="_blank" title="国际">国际</a></li>
+                    <li><a href="http://dzb.hxnews.com/news/" target="_blank" title="电子报">电子报</a></li>
+                    <li class="hxw-nav-list-last"><a href="#" class="hxw-more">更多<i></i></a>
+                        <ul class="hxw-nav-others">
+                            <li>
+                                <a href="http://www.hxnews.com/edu/jyzx/" title="教育" target="_blank">教育</a>
+                                <a href="http://house.hxnews.com/" title="房产" target="_blank">房产</a>
+                                <a href="http://auto.hxnews.com/" title="汽车" target="_blank">汽车</a>
+                                <a href="http://chuangye.hxnews.com/" title="创业" target="_blank">创业</a>
+                                <a href="http://home.hxnews.com/house/" title="家居" target="_blank">家居</a>
+                                <a href="http://www.hxnews.com/travel/" title="旅游" target="_blank">旅游</a>
+                            </li>
+                            <li>
+                                <a href="" title="出国" target="_blank">出国</a>
+                                <a href="http://love.hxnews.com/" title="婚恋" target="_blank">婚恋</a>
+                                <a title="婚嫁" target="_blank" href="http://www.hxnews.com/marry/">婚嫁</a>
+                                <a href="http://www.hxnews.com/baby/" title="亲子" target="_blank">亲子</a>
+                                <a href="http://www.hxnews.com/news/sp/" title="海峡视频" target="_blank">视频</a>
+                                <a href="http://www.hxnews.com/news/tp/" title="海峡图库" target="_blank">图片</a>
+                            </li>
+                            <li class="hxw-nav-others-last">
+                                <a href="http://www.hxnews.com/news/yl/" title="娱乐新闻" target="_blank">娱乐</a>
+                                <a href="http://www.hxnews.com/news/ty/" title="体育新闻" target="_blank">体育</a>
+                                <a href="http://chuangye.hxnews.com/hxcyhd/" target="_blank" title="IT科技">科技</a>
+                                <a href="http://www.hxnews.com/news/cjpd/" title="财经新闻" target="_blank">财经</a>
+                                <a href="http://www.hxnews.com/news/dmyx/dmzx/" title="动漫" target="_blank">动漫</a>
+                                <a href="http://www.hxnews.com/dz/" target="_blank" title="段子趣图">段子</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--通行证组件start-->
+            <div class="hxw-client">
+                <div class="hxw-client-tl">
+                    <a class="hxw-yd">海湃客户端<i></i></a>
+                    <div class="hxw-dropdown">
+                        <img src="http://img.hxnews.com/w/templates/nhaidu/skin/images/pages/index_news_20160419/hxw_1.jpg">
+                    </div>
+                </div>
+            </div>
+            <div id="SI_User" class="TAP14" style="position: relative;">
+                <div id="logout_status">
+                    <div class="ac-rgst"> <a href="http://apps.hxnews.com/?app=member&amp;controller=index&amp;action=register" class="head-register msg-link" target="_blank">注册</a> </div>
+                    <div class="ac-login">
+                        <div class="ac-login-cnt">
+                            <a class="ac-login-cnt head-login" href="http://apps.hxnews.com/?app=member&amp;controller=index&amp;action=login">
+                                <span class="log-links">登录</span>/</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="yh ac-login " id="login_status" style="display:none;">
+                    <div class="head-login log-links" href="http://apps.hxnews.com/?app=member&amp;controller=index&amp;action=login">
+                        <span class="yh_wright">您好，<a target="_blank" href="http://apps.hxnews.com/?app=contribution&amp;controller=panel&amp;action=index" class="head-member"><em></em></a></span>&nbsp;|&nbsp;<a href="http://apps.hxnews.com/?app=member&amp;controller=index&amp;action=logout"
+                            class="head-logout">退出</a>
+                    </div>
+                </div>
+            </div>
+            <!--/通行证组件end-->
+        </div>
+    </div>
+    <!-- 头部 -->
+    <div class="hx-head">
+        <div class="wrap clearfix">
+            <div class="hx-head-l">
+                <div class="hx-logo">
+                    <img src="https://img.thea.cn/public/platform/thea/201905/hx/images/hx-logo.png" alt="">
+                </div>
+                <h1 class="hx-h1">教育培训</h1>
+                <div class="hx-address">
+                    <p class="hx-act"><i class="hx-address-icon-1"></i><span>全国</span><i class="hx-address-icon-2"></i></p>
+                    <div class="hx-city-box">
+                        <p class="hx-select">请选择城市:</p>
+                        <ul class="hx-area">
+                            <li class="active">热门城市</li>
+                            <li>华北地区</li>
+                            <li>华南地区</li>
+                            <li>华东地区</li>
+                            <li>华东地区</li>
+                            <li>中西部地区</li>
+                        </ul>
+                        <div class="hx-city active">
+                            <a class="active" href="">1深圳</a>
+                            <a href="">广州</a>
+                            <a href="">佛山</a>
+                            <a href="">上海</a>
+                            <a href="">北京</a>
+                            <a href="">南京</a>
+                            <a href="">杭州</a>
+                            <a href="">苏州</a>
+                        </div>
+                        <div class="hx-city">
+                            <a href="">2深圳</a>
+                            <a href="">广州</a>
+                            <a href="">佛山</a>
+                            <a href="">上海</a>
+                            <a href="">北京</a>
+                            <a href="">南京</a>
+                            <a href="">杭州</a>
+                            <a href="">苏州</a>
+                        </div>
+                        <div class="hx-city">
+                            <a href="">3深圳</a>
+                            <a href="">广州</a>
+                            <a href="">佛山</a>
+                            <a href="">上海</a>
+                            <a href="">北京</a>
+                            <a href="">南京</a>
+                            <a href="">杭州</a>
+                            <a href="">苏州</a>
+                        </div>
+                        <div class="hx-city">
+                            <a href="">4深圳</a>
+                            <a href="">广州</a>
+                            <a href="">佛山</a>
+                            <a href="">上海</a>
+                            <a href="">北京</a>
+                            <a href="">南京</a>
+                            <a href="">杭州</a>
+                            <a href="">苏州</a>
+                        </div>
+                        <div class="hx-city">
+                            <a href="">5深圳</a>
+                            <a href="">广州</a>
+                            <a href="">佛山</a>
+                            <a href="">上海</a>
+                            <a href="">北京</a>
+                            <a href="">南京</a>
+                            <a href="">杭州</a>
+                            <a href="">苏州</a>
+                        </div>
+                        <div class="hx-city">
+                            <a href="">6深圳</a>
+                            <a href="">广州</a>
+                            <a href="">佛山</a>
+                            <a href="">上海</a>
+                            <a href="">北京</a>
+                            <a href="">南京</a>
+                            <a href="">杭州</a>
+                            <a href="">苏州</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hx-head-r">
+                <div class="hx-search t_search">
+                    <form id="search_one" class="clearfix" name="search_one" method="post" onsubmit="CheckForm(); return false;" target="_blank">
+                        <input name="text_one" type="text" id="text_one" class="search_text text" value="" placeholder="请输入关键词">
+                        <input type="submit" id="submit_one" name="submit_one" class="search_submit btn" value="搜索">
+                    </form>
+                </div>
+                <div class="hx-tel">400-657-7669</div>
+            </div>
+        </div>
+    </div>
+    <!-- 导航 -->
+    <div class="hx-nav">
+        <div class="wrap">
+            <ul class="hx-nav-menu clearfix">
+                <li class="cur">
+                    <a class="hx-l-1" href="">首页</a>
+                </li>
+                <li>
+                    <a class="hx-l-1" href="">面授培训</a>
+                </li>
+                <li>
+                    <a class="hx-l-1" href="">网络课程</a>
+                </li>
+                <li>
+                    <a class="hx-l-1" href="">考试资讯</a>
+                </li>
+                <li>
+                    <a class="hx-l-1" href="">学员问答</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="hx-banner">
+        <a class="banner" href="">
+            <img src="https://img.thea.cn/public/platform/thea/201905/hx/images/banner-1.jpg" alt="">
+        </a>
+    </div>
+    <!-- 中间内容 -->
+    <div class="wrap clearfix">
+        <!-- 左侧内容 -->
+        <div class="hx-l">
+            <!-- 面授培训 -->
+            <div class="hx-l-ms">
+                <div class="hx-tit-box-2 clearfix">
+                    <h2 class="hx-tit-2"><i class="icon-ms"></i><span>面授培训</span></h2>
+                    <a class="hx-more-2" href="">更多&gt;</a>
+                </div>
+                <ul class="hx-zt-list clearfix">
+                    <li>
+                        <a href=""><img src="https://img.thea.cn/public/platform/thea/201905/hx/images/zt-1.png" alt=""></a>
+                        <p>一级建造师</p>
+                    </li>
+                    <li>
+                        <a href=""><img src="https://img.thea.cn/public/platform/thea/201905/hx/images/zt-1.png" alt=""></a>
+                        <p>一级建造师</p>
+                    </li>
+                    <li>
+                        <a href=""><img src="https://img.thea.cn/public/platform/thea/201905/hx/images/zt-1.png" alt=""></a>
+                        <p>一级建造师</p>
+                    </li>
+                    <li>
+                        <a href=""><img src="https://img.thea.cn/public/platform/thea/201905/hx/images/zt-1.png" alt=""></a>
+                        <p>一级建造师</p>
+                    </li>
+                </ul>
+                <ul class="hx-ms-list">
+                    <li>
+                        <a href="">精装修造价实操班课程设置</a>
+                        <a href="">2018年土建实操班招18年土建实操班招18年土建实操班招18年土建实操班招生信息</a>
+                    </li>
+                    <li>
+                        <a href="">精装修造价实操班课程设置</a>
+                        <a href="">2018年土建实操班招生信息</a>
+                    </li>
+                    <li>
+                        <a href="">精装修造价实操班课程设置</a>
+                        <a href="">2018年土建实操班招生信息</a>
+                    </li>
+                    <li>
+                        <a href="">精装修造价实操班课程设置</a>
+                        <a href="">2018年土建实操班招生信息</a>
+                    </li>
+                    <li>
+                        <a href="">精装修造价实操班课程设置</a>
+                        <a href="">2018年土建实操班招18年土建实操班招18年土建实操班招18年土建实操班招生信息</a>
+                    </li>
+                    <li>
+                        <a href="">精装修造价实操班课程设置</a>
+                        <a href="">2018年土建实操班招生信息</a>
+                    </li>
+                    <li>
+                        <a href="">精装修造价实操班课程设置</a>
+                        <a href="">2018年土建实操班招生信息</a>
+                    </li>
+                    <li>
+                        <a href="">精装修造价实操班课程设置</a>
+                        <a href="">2018年土建实操班招生信息</a>
+                    </li>
+                    <li>
+                        <a href="">精装修造价实操班课程设置</a>
+                        <a href="">2018年土建实操班招生信息</a>
+                    </li>
+                    <li>
+                        <a href="">精装修造价实操班课程设置</a>
+                        <a href="">2018年土建实操班招生信息</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 网络课程 -->
+            <div class="hx-l-wk">
+                <div class="hx-tit-box-2 clearfix">
+                    <h2 class="hx-tit-2"><i class="icon-wk"></i><span>网络课程</span></h2>
+                    <a class="hx-more-2" href="">更多&gt;</a>
+                </div>
+                <ul class="hx-wk-list-2">
+                    <li>
+                        <div class="hx-con-box">
+                            <a class="img" href="">
+                                <img src="https://img.thea.cn/public/platform/thea/201905/hx/images/wk-1.png" alt="">
+                            </a>
+                            <div class="txt">
+                                <h4 class="txt-1"><a href="">杭州初中生军事夏令营培训</a></h4>
+                                <p class="txt-2">内部讲义、全程1对1督导、实时互...</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hx-con-box">
+                            <a class="img" href="">
+                                <img src="https://img.thea.cn/public/platform/thea/201905/hx/images/wk-1.png" alt="">
+                            </a>
+                            <div class="txt">
+                                <h4 class="txt-1"><a href="">杭州初中生军事夏令营培训</a></h4>
+                                <p class="txt-2">内部讲义、全程1对1督导、实时互...</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hx-con-box">
+                            <a class="img" href="">
+                                <img src="https://img.thea.cn/public/platform/thea/201905/hx/images/wk-1.png" alt="">
+                            </a>
+                            <div class="txt">
+                                <h4 class="txt-1"><a href="">杭州初中生军事夏令营培训</a></h4>
+                                <p class="txt-2">内部讲义、全程1对1督导、实时互...</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="hx-wk-list clearfix">
+                    <li>
+                        <a href=""><span>1环球网校</span> 零基础私教班零基础私教班零基础私教班零基础私教班零基础私教班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>环球网校</span> 零基础私教班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>[建设工程教育网]</span> 高端无忧班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>[环球网校]</span> 零基础私教班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>[建设工程教育网]</span> 高端无忧班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>环球网校</span> 零基础私教班零基础私教班零基础私教班零基础私教班零基础私教班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>环球网校</span> 零基础私教班零基础私教班零基础私教班零基础私教班零基础私教班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>1环球网校</span> 零基础私教班零基础私教班零基础私教班零基础私教班零基础私教班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>环球网校</span> 零基础私教班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>[建设工程教育网]</span> 高端无忧班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>[环球网校]</span> 零基础私教班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>[建设工程教育网]</span> 高端无忧班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>环球网校</span> 零基础私教班零基础私教班零基础私教班零基础私教班零基础私教班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>环球网校</span> 零基础私教班零基础私教班零基础私教班零基础私教班零基础私教班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>环球网校</span> 零基础私教班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>[建设工程教育网]</span> 高端无忧班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>[环球网校]</span> 零基础私教班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>[建设工程教育网]</span> 高端无忧班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>环球网校</span> 零基础私教班零基础私教班零基础私教班零基础私教班零基础私教班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>环球网校</span> 零基础私教班零基础私教班零基础私教班零基础私教班零基础私教班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>环球网校</span> 零基础私教班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>[建设工程教育网]</span> 高端无忧班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>[环球网校]</span> 零基础私教班</a>
+                    </li>
+                    <li>
+                        <a href=""><span>[建设工程教育网]</span> 高端无忧班</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 考试资讯 -->
+            <div class="hx-l-ks hx-tab-box">
+                <div class="hx-tit-box-2 clearfix">
+                    <h2 class="hx-tit-2"><i class="icon-ks"></i><span>考试资讯</span></h2>
+                    <div class="tab-r">
+                        <ul class="hx-tab ly-tab clearfix">
+                            <li class="active">
+                                <h3><a href="">考试报名</a></h3>
+                            </li>
+                            <li>
+                                <h3><a href="">领准考证</a></h3>
+                            </li>
+                            <li>
+                                <h3><a href="">成绩查询</a></h3>
+                            </li>
+                            <li>
+                                <h3><a href="">考试大纲</a></h3>
+                            </li>
+                            <li>
+                                <h3><a href="">报考指南</a></h3>
+                            </li>
+                        </ul>
+                        <a class="hx-more-2" href="">更多&gt;</a>
+                    </div>
+                </div>
+                <div class="hx-tab-card clearfix active">
+                    <ul class="hx-ks-list">
+                        <li>
+                            <a class="hx-tit" href="">
+                                                12019四川中级会计职称报名入口已开通019四川中级会计职称报名入口已开通019四川中级会计职称报名入口已开通019四川中级会计职称报名入口已开通
+                                            </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                2019四川中级会计职称报名入口已开通
+                                            </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                2019四川中级会计职称报名入口已开通
+                                            </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                2019四川中级会计职称报名入口已开通
+                                            </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                2019四川中级会计职称报名入口已开通
+                                            </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                2019四川中级会计职称报名入口已开通
+                                            </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                2019四川中级会计职称报名入口已开通
+                                            </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                2019四川中级会计职称报名入口已开通
+                                            </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                2019四川中级会计职称报名入口已开通
+                                            </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                2019四川中级会计职称报名入口已开通
+                                            </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hx-tab-card clearfix">
+                    <ul class="hx-ks-list">
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        22019四川中级会计职称报名入口已开通019四川中级会计职称报名入口已开通019四川中级会计职称报名入口已开通019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hx-tab-card clearfix">
+                    <ul class="hx-ks-list">
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        3 2019四川中级会计职称报名入口已开通019四川中级会计职称报名入口已开通019四川中级会计职称报名入口已开通019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hx-tab-card clearfix">
+                    <ul class="hx-ks-list">
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        4 2019四川中级会计职称报名入口已开通019四川中级会计职称报名入口已开通019四川中级会计职称报名入口已开通019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hx-tab-card clearfix">
+                    <ul class="hx-ks-list">
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        5 2019四川中级会计职称报名入口已开通019四川中级会计职称报名入口已开通019四川中级会计职称报名入口已开通019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                        <li>
+                            <a class="hx-tit" href="">
+                                                        2019四川中级会计职称报名入口已开通
+                                                    </a>
+                            <span><i class="hx-time"></i>2019-04-19</span>
+                            <span><i class="hx-tag"></i>二级建造师</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 学员问答 -->
+            <div class="hx-l-wd">
+                <div class="hx-tit-box-2 clearfix">
+                    <h2 class="hx-tit-2"><i class="icon-wd"></i><span>学员问答</span></h2>
+                    <a class="hx-more-2" href="">更多&gt;</a>
+                </div>
+                <div class="hx-wd-box">
+                    <div class="hx-wd-card">
+                        <a class="hx-wd-w clearfix" href="javascript:void (0)">
+                            <strong>问</strong>1 一级建造师培训班收费
+                        </a>
+                        <div class="hx-wd-d clearfix">
+                            <strong>答</strong>
+                            <p>
+                                一级建造师哪里好，收费怎么样，找不 到好机构，郁闷。推荐一个学校... 一级建造师哪里好，收费怎么样，找不 到好机构，郁闷。推荐一个学校... 一级建造师哪里好，收费怎么样，找不 到好机构，郁闷。推荐一个学校... 一级建造师哪里好，收费怎么样，找不 到好机构，郁闷。推荐一个学校... 一级建造师哪里好，收费怎么样，找不 到好机构，郁闷。推荐一个学校...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="hx-wd-card">
+                        <a class="hx-wd-w clearfix" href="javascript:void (0)">
+                            <strong>问</strong> 一级建造师培训班收费
+                        </a>
+                        <div class="hx-wd-d clearfix">
+                            <strong>答</strong>
+                            <p>
+                                一级建造师哪里好，收费怎么样，找不 到好机构，郁闷。推荐一个学校...好机构，郁闷。推荐一个学校...好机构，郁闷。推荐一个学校...好机构，郁闷。推荐一个学校...好机构，郁闷。推荐一个学校...好机构，郁闷。推荐一个学校...好机构，郁闷。推荐一个学校...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="hx-ms-list">
+                    <li>
+                        <a href="">精装修造价实操班课程设置</a>
+                        <a href="">2018年土建实操班招18年土建实操班招18年土建实操班招18年土建实操班招生信息</a>
+                    </li>
+                    <li>
+                        <a href="">精装修造价实操班课程设置</a>
+                        <a href="">2018年土建实操班招生信息</a>
+                    </li>
+                    <li>
+                        <a href="">精装修造价实操班课程设置</a>
+                        <a href="">2018年土建实操班招生信息</a>
+                    </li>
+                    <li>
+                        <a href="">精装修造价实操班课程设置</a>
+                        <a href="">2018年土建实操班招生信息</a>
+                    </li>
+                    <li>
+                        <a href="">精装修造价实操班课程设置</a>
+                        <a href="">2018年土建实操班招生信息</a>
+                    </li>
+                    <li>
+                        <a href="">精装修造价实操班课程设置</a>
+                        <a href="">2018年土建实操班招生信息</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 右侧内容 -->
+        <div class="hx-r">
+            <!-- 右侧表单 -->
+            <form class="tcn-r-form sign-in">
+                <input type="text" class="tcn-user-name user-name" placeholder="请输入您的姓名">
+                <input type="text" class="tcn-user-tel user-tel" maxlength="11" placeholder="请输入您的联系方式 ">
+                <input type="submit" class="tcn-submit" value="立即领取">
+                <div class="tcn-consult">
+                    <div class="tcn-tel">
+                        <span>报考咨询</span><br/>
+                        <strong>17722510186</strong>
+                    </div>
+                    <a href="javascript:void (0)" class="tcn-online" target="_blank">
+                        <img src="https://img.thea.cn/public/platform/thea/201905/hx/images/tcn_online1.png" alt=""><br/>
+                        <span>在线咨询</span>
+                    </a>
+                </div>
+            </form>
+            <!--热门机构-->
+            <div class="tcn-r-jg">
+                <div class="tcn-r-title">
+                    <i></i>
+                    <span>热门机构</span>
+                </div>
+                <div class="tcn-jg-item">
+                    <div class="mask"></div>
+                    <img src="https://img.thea.cn/public/platform/thea/201905/hx/images/chinaacc_logo.png" alt="中华会计网校">
+                    <div class="tcn-jg-xq">
+                        <p>
+                            初级会计职称｜中级会计职称｜中级会计 职称｜中级会计职称｜初级会计职...
+                        </p>
+                        <span>机构主页</span>
+                    </div>
+                    <a href="javascript:void (0)" target="_blank">机构主页 > </a>
+                </div>
+                <div class="tcn-jg-item">
+                    <div class="mask"></div>
+                    <img src="https://img.thea.cn/public/platform/thea/201905/hx/images/chinaacc_logo.png" alt="中华会计网校">
+                    <div class="tcn-jg-xq">
+                        <p>
+                            初级会计职称｜中级会计职称｜中级会计 职称｜中级会计职称｜初级会计职...
+                        </p>
+                        <span>机构主页</span>
+                    </div>
+                    <a href="javascript:void (0)" target="_blank">机构主页 > </a>
+                </div>
+                <div class="tcn-jg-item">
+                    <div class="mask"></div>
+                    <img src="https://img.thea.cn/public/platform/thea/201905/hx/images/chinaacc_logo.png" alt="中华会计网校">
+                    <div class="tcn-jg-xq">
+                        <p>
+                            初级会计职称｜中级会计职称｜中级会计 职称｜中级会计职称｜初级会计职...
+                        </p>
+                        <span>机构主页</span>
+                    </div>
+                    <a href="javascript:void (0)" target="_blank">机构主页 > </a>
+                </div>
+                <div class="tcn-jg-item">
+                    <div class="mask"></div>
+                    <img src="https://img.thea.cn/public/platform/thea/201905/hx/images/chinaacc_logo.png" alt="中华会计网校">
+                    <div class="tcn-jg-xq">
+                        <p>
+                            初级会计职称｜中级会计职称｜中级会计 职称｜中级会计职称｜初级会计职...
+                        </p>
+                        <span>机构主页</span>
+                    </div>
+                    <a href="javascript:void (0)" target="_blank">机构主页 > </a>
+                </div>
+            </div>
+            <!--热门网课-->
+            <div class="tcn-r-wk">
+                <div class="tcn-r-title">
+                    <i></i>
+                    <span>热门网课</span>
+                    <a href="javascript:void (0)">更多 ></a>
+                </div>
+                <div class="tcn-wk-item">
+                    <div class="mask"></div>
+                    <img src="https://img.thea.cn/public/platform/thea/201905/hx/images/tcn_avatar1.png" alt="头像">
+                    <div class="tcn-wk-xq">
+                        <div class="tcn-wk-xq-headline">建设工程项目管理</div>
+                        <div class="tcn-wk-xq-nr">
+                            直播时间 : <span>今日</span> 时长 : <span>60分钟</span>
+                        </div>
+                    </div>
+                    <a href="javascript:void (0)" target="_blank">立即试听 > </a>
+                </div>
+                <div class="tcn-wk-item">
+                    <div class="mask"></div>
+                    <img src="https://img.thea.cn/public/platform/thea/201905/hx/images/tcn_avatar2.png" alt="头像">
+                    <div class="tcn-wk-xq">
+                        <div class="tcn-wk-xq-headline">建设工程项目管理</div>
+                        <div class="tcn-wk-xq-nr">
+                            直播时间 : <span>今日</span> 时长 : <span>60分钟</span>
+                        </div>
+                    </div>
+                    <a href="javascript:void (0)" target="_blank">立即试听 > </a>
+                </div>
+                <div class="tcn-wk-item">
+                    <div class="mask"></div>
+                    <img src="https://img.thea.cn/public/platform/thea/201905/hx/images/tcn_avatar3.png" alt="头像">
+                    <div class="tcn-wk-xq">
+                        <div class="tcn-wk-xq-headline">建设工程项目管理</div>
+                        <div class="tcn-wk-xq-nr">
+                            直播时间 : <span>今日</span> 时长 : <span>60分钟</span>
+                        </div>
+                    </div>
+                    <a href="javascript:void (0)" target="_blank">立即试听 > </a>
+                </div>
+                <div class="tcn-wk-item">
+                    <div class="mask"></div>
+                    <img src="https://img.thea.cn/public/platform/thea/201905/hx/images/tcn_avatar3.png" alt="头像">
+                    <div class="tcn-wk-xq">
+                        <div class="tcn-wk-xq-headline">建设工程项目管理</div>
+                        <div class="tcn-wk-xq-nr">
+                            直播时间 : <span>今日</span> 时长 : <span>60分钟</span>
+                        </div>
+                    </div>
+                    <a href="javascript:void (0)" target="_blank">立即试听 > </a>
+                </div>
+            </div>
+            <!--热门新闻-->
+            <div class="tcn-r-news">
+                <div class="tcn-r-title">
+                    <i></i>
+                    <span>热门新闻</span>
+                </div>
+                <div class="tcn-new-vessel">
+                    <div class="tcn-new-item clearfix">
+                        <img src="https://img.thea.cn/public/platform/thea/201905/hx/images/tcn_new1.png" alt="新闻">
+                        <div class="tcn-wk-xq">
+                            <a class="tcn-wk-xq-headline" href="javascript:void (0)" target="_blank">
+                                · 2018年一级消防工<br/>
+                                程师可以报名了吗？
+                            </a>
+                            <div class="tcn-wk-xq-nr">
+                                <i></i>
+                                <span>2019-04-19</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tcn-new-item clearfix">
+                        <img src="https://img.thea.cn/public/platform/thea/201905/hx/images/tcn_new1.png" alt="新闻">
+                        <div class="tcn-wk-xq">
+                            <a class="tcn-wk-xq-headline" href="javascript:void (0)" target="_blank">
+                                · 2018年一级消防工<br/>
+                                程师可以报名了吗？
+                            </a>
+                            <div class="tcn-wk-xq-nr">
+                                <i></i>
+                                <span>2019-04-19</span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="tcn-new-list">
+                        <li><a href="">▪ 2018年一级消防工程师可以报名了吗？</a></li>
+                        <li><a href="">▪ 北京Linux运维培训机构费用多少</a></li>
+                        <li><a href="">▪ 2018年一级消防工程师可以报名了吗？</a></li>
+                        <li><a href="">▪ 北京OCM培训价格多少</a></li>
+                        <li><a href="">▪ 精装修造价实操班课程设置...</a></li>
+                        <li><a href="">▪ 2018年土建实操班招生信息</a></li>
+                        <li><a href="">▪ 2018年一级消防工程师可以报名了吗？</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="hx-friend-link">
+        <div class="wrap clearfix">
+            <div class="link-list link-list-1">
+                <h4 class="link-tit"><i></i><span>友情链接</span></h4>
+                <div class="link-box">
+                    <a href="">网校地图</a>
+                    <a href="">上海英孚教育</a>
+                    <a href="">高中网校</a>
+                    <a href="">账屋网</a>
+                    <a href="">初中网校</a>
+                    <a href="">k12网校</a>
+                    <a href="">妇幼课堂</a>
+                    <a href="">初中网校</a>
+                    <a href="">k12网校</a>
+                    <a href="">高中网校</a>
+                    <a href="">账屋网</a>
+                    <a href="">初中网校</a>
+                </div>
+            </div>
+            <div class="link-list link-list-2">
+                <h4 class="link-tit"><i></i><span>机构推荐</span></h4>
+                <div class="link-box">
+                    <a href="">网校地图</a>
+                    <a href="">上海英孚教育</a>
+                    <a href="">高中网校</a>
+                    <a href="">账屋网</a>
+                    <a href="">初中网校</a>
+                    <a href="">k12网校</a>
+                    <a href="">妇幼课堂</a>
+                    <a href="">初中网校</a>
+                    <a href="">k12网校</a>
+                    <a href="">高中网校</a>
+                    <a href="">账屋网</a>
+                    <a href="">初中网校</a>
+                    <a href="">k12网校</a>
+                    <a href="">高中网校</a>
+                    <a href="">账屋网</a>
+                    <a href="">初中网校</a>
+                    <a class="link-more" href="">更多&gt;&gt;</a>
+                </div>
+            </div>
+            <div class="link-list link-list-3">
+                <h4 class="link-tit"><i></i><span>全国分站</span></h4>
+                <div class="link-box">
+                    <a href="">网校地图</a>
+                    <a href="">上海英孚教育</a>
+                    <a href="">高中网校</a>
+                    <a href="">账屋网</a>
+                    <a href="">初中网校</a>
+                    <a href="">k12网校</a>
+                    <a href="">妇幼课堂</a>
+                    <a href="">初中网校</a>
+                    <a href="">k12网校</a>
+                    <a href="">高中网校</a>
+                    <a href="">账屋网</a>
+                    <a href="">初中网校</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <p class="links"><a href="#" target="_blank">面授</a>| <a href="#" target="_blank">网课</a>| <a href="#" target="_blank">资讯</a>| <a href="#" target="_blank">机构</a>| <a href="#" target="_blank">网站地图</a></p>
+        <p>CopyRight ©2017 海峡网(福建日报主管主办) 版权所有 闽ICP备15008128号-2 闽互联网新闻信息服务备案编号：20070802号</p>
+    </div>
+    <script src="https://img.thea.cn/public/js/thea.ms.form.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://img.thea.cn/public/platform/china/201808/wkml-yy/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="https://img.thea.cn/public/platform/thea/201905/hx/js/index.js"></script>
+</body>
+
+</html>
