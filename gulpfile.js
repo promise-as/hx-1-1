@@ -96,4 +96,5 @@ gulp.task('watch', ['default'], function () {
 });
 
 /*暂时还没用到js*/
-gulp.task('default', ['minifyjs', 'minifycss', 'minifyhtml']) //异步执行
+// gulp.task('default', ['minifyjs', 'minifycss', 'minifyhtml']) //异步执行
+gulp.task('default', ['minifycss', 'minifyhtml']) //异步执行
